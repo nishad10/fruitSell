@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title> Fruit Selling Platform</title>
+	
+	<link rel="stylesheet" href="bootstrapcss/css/styles.css">
+	<link rel="stylesheet" href="bootstrapcss/css/bootstrap.min.css">
+	
+	<script src="bootstrapcss/js/validate.js"></script>
+
+</head>
+<body>
+	<div class="container">
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href=index.html><img src="img/farm.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Fruit Selling (Enter Order Below)</a>
+		<br/>
+		<br/>
+	</nav>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<form id="checkoutForm" method="post" action="formAction.php">
+					
+					<div class="form-group">
+						<label class="control-label">Name </label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" id="name" name="name" placeholder="Enter name here" onchange="validateName(this)" />
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">Apples-69&cent <img src="img/apple.svg" width="30" height="30" class="d-inline-block align-top" alt=""> </label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" id="apples" name="apples" placeholder="Enter number of apples" onchange="validateNumber(this) onClick="CalculateTotalCost(this.form)" />
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">Oranges-59&cent <img src="img/orange.svg" width="30" height="30" class="d-inline-block align-top" alt=""> </label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" id="oranges" name="oranges" placeholder="Enter number of oranges" onchange="validateNumber(this) onClick="CalculateTotalCost(this.form)" />
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">Bananas-39&cent <img src="img/banana.svg" width="30" height="30" class="d-inline-block align-top" alt=""> </label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" id="bananas" name="bananas" placeholder="Enter number of bananas" onchange="validateNumber(this) onClick="CalculateTotalCost(this.form)" />
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">Payment Method </label>
+						<div class="col-md-5">
+							<input type="radio" name="payment" id="visa" value="visa" checked />Visa<br>
+							<input type="radio" name="payment" id="mastercard" value="mastercard" />Master Card<br>
+							<input type="radio" name="payment" id="discover" value="discover" />Discover
+						</div>
+					</div>
+					
+					<div class="form-group">
+                      <label class="control-label">Total Order Cost ($):</label>
+                      <input class="form-control" type="text" id="totalCost" name="totalCost" readonly />
+					</div>
+					
+					
+					<div class="btn-group">
+                          <div class="col-sm-5">
+                              <button type="submit" name="Submit" class="btn btn-success">Submit</button>
+                          </div>
+                          <div class="col-sm-5">
+                              <button type="reset" class="btn btn-danger">Reset</button>
+                          </div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
